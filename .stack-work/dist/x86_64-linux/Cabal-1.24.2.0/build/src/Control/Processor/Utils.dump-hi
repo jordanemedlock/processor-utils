@@ -1,0 +1,133 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-30 17:15:15.292025 UTC
+
+interface processor-utils-0.1.0.0-1y3SvWWBO3LLmYnHgh4BDl:Control.Processor.Utils 8002
+  interface hash: 51d1d352148233c44a389329757649b9
+  ABI hash: e1fce7f0d473daeae3e03ec76e364a7f
+  export-list hash: 46eb67b981452cbaba95d6c6d0c98e1f
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 0ce907ebaedac8f2bfcdb72d1b2adbe6
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Control.Processor.Utils.marr
+  Control.Processor.Utils.pmap
+module dependencies:
+package dependencies: MemoTrie-0.6.7@MemoTrie-0.6.7-BQ9xkZLBNYcCjvEu2ePp3B
+                      allocated-processor-0.0.2@allocated-processor-0.0.2-4SDH30hlHME2CMuQGtRJJ3
+                      base-4.9.1.0* ghc-prim-0.5.0.0 integer-gmp-1.0.0.1
+                      newtype-generics-0.5@newtype-generics-0.5-9eIKAb10zDILJBpr5WYetq
+                      vector-space-0.10.4@vector-space-0.10.4-K1jh5A5NiHbFdG9bAV0KZx
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: MemoTrie-0.6.7@MemoTrie-0.6.7-BQ9xkZLBNYcCjvEu2ePp3B:Data.MemoTrie
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+                         newtype-generics-0.5@newtype-generics-0.5-9eIKAb10zDILJBpr5WYetq:Control.Newtype
+                         vector-space-0.10.4@vector-space-0.10.4-K1jh5A5NiHbFdG9bAV0KZx:Data.VectorSpace
+import  -/  allocated-processor-0.0.2@allocated-processor-0.0.2-4SDH30hlHME2CMuQGtRJJ3:Control.Processor c3109949a3749c5256fe760be5dfadb9
+import  -/  base-4.9.1.0:Control.Arrow 70754b538e7d75521cd68162917b6946
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.Traversable 556020d7cf3c4a34a774600512918a37
+import  -/  base-4.9.1.0:Data.Tuple 7dc4bbb45d2e69c991ffac438beeca11
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+b2cb26f8ae883e4520164dd621a752dc
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Control.Processor.Utils.$trModule2
+                   Control.Processor.Utils.$trModule1) -}
+84aa3256f895936a0e8ab17f4069826a
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Control.Processor.Utils"#) -}
+b5f07b3aa8544221d5105d6f3a7650d4
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "processor-utils-0.1.0.0-1y3SvWWBO3LLmYnHgh4BDl"#) -}
+6d136deb693308c507711f62703da61a
+  marr ::
+    GHC.Base.Monad m => (a -> m b) -> Control.Processor.Processor m a b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(U,U,U,U,U)><L,U>,
+     Unfolding: (\ @ (m :: * -> *)
+                   @ a
+                   @ b
+                   ($dMonad :: GHC.Base.Monad m)
+                   (f :: a -> m b) ->
+                 Control.Processor.Processor
+                   @ m
+                   @ a
+                   @ b
+                   @ a
+                   $dMonad
+                   (\ (a1 :: a) (ds :: a) -> GHC.Base.return @ m $dMonad @ a a1)
+                   (GHC.Base.return @ m $dMonad @ a)
+                   f
+                   (let {
+                      x :: m () = GHC.Base.return @ m $dMonad @ () GHC.Tuple.()
+                    } in
+                    \ (ds :: a) -> x)) -}
+b002e3550bc2dab78aa0c17d2f7188e1
+  pmap ::
+    Control.Processor.Processor m a b
+    -> Control.Processor.Processor m [a] [b]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ (m :: * -> *)
+                   @ a
+                   @ b
+                   (ds :: Control.Processor.Processor m a b) ->
+                 case ds of wild { Control.Processor.Processor x $dMonad pf1 af1 cf1 rf1 ->
+                 let {
+                   lvl :: [(a, x)] -> m [x]
+                   = Data.Traversable.$fTraversable[]_$cmapM
+                       @ m
+                       @ (a, x)
+                       @ x
+                       $dMonad
+                       (Data.Tuple.uncurry @ a @ x @ (m x) pf1)
+                 } in
+                 let {
+                   lvl1 :: [x] -> m ()
+                   = Data.Foldable.mapM_
+                       @ []
+                       @ m
+                       @ x
+                       @ ()
+                       Data.Foldable.$fFoldable[]
+                       $dMonad
+                       rf1
+                 } in
+                 let {
+                   lvl2 :: [x] -> m [b]
+                   = Data.Traversable.$fTraversable[]_$cmapM @ m @ x @ b $dMonad cf1
+                 } in
+                 let {
+                   lvl3 :: [a] -> m [x]
+                   = Data.Traversable.$fTraversable[]_$cmapM @ m @ a @ x $dMonad af1
+                 } in
+                 Control.Processor.Processor
+                   @ m
+                   @ [a]
+                   @ [b]
+                   @ [x]
+                   $dMonad
+                   (\ (as :: [a]) (xs :: [x]) -> lvl (GHC.List.zip @ a @ x as xs))
+                   (\ (as :: [a]) -> lvl3 as)
+                   (\ (xs :: [x]) -> lvl2 xs)
+                   (\ (xs :: [x]) -> lvl1 xs) }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
