@@ -29,12 +29,12 @@ version :: Version
 version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "/projects/processor-utils/.stack-work/install/x86_64-linux/lts-8.21/8.0.2/bin"
-libdir     = "/projects/processor-utils/.stack-work/install/x86_64-linux/lts-8.21/8.0.2/lib/x86_64-linux-ghc-8.0.2/processor-utils-0.1.0.0-1y3SvWWBO3LLmYnHgh4BDl"
-dynlibdir  = "/projects/processor-utils/.stack-work/install/x86_64-linux/lts-8.21/8.0.2/lib/x86_64-linux-ghc-8.0.2"
-datadir    = "/projects/processor-utils/.stack-work/install/x86_64-linux/lts-8.21/8.0.2/share/x86_64-linux-ghc-8.0.2/processor-utils-0.1.0.0"
-libexecdir = "/projects/processor-utils/.stack-work/install/x86_64-linux/lts-8.21/8.0.2/libexec"
-sysconfdir = "/projects/processor-utils/.stack-work/install/x86_64-linux/lts-8.21/8.0.2/etc"
+bindir     = "/projects/haskell-dlib/.stack-work/install/x86_64-linux/lts-8.18/8.0.2/bin"
+libdir     = "/projects/haskell-dlib/.stack-work/install/x86_64-linux/lts-8.18/8.0.2/lib/x86_64-linux-ghc-8.0.2/processor-utils-0.1.0.0-1y3SvWWBO3LLmYnHgh4BDl"
+dynlibdir  = "/projects/haskell-dlib/.stack-work/install/x86_64-linux/lts-8.18/8.0.2/lib/x86_64-linux-ghc-8.0.2"
+datadir    = "/projects/haskell-dlib/.stack-work/install/x86_64-linux/lts-8.18/8.0.2/share/x86_64-linux-ghc-8.0.2/processor-utils-0.1.0.0"
+libexecdir = "/projects/haskell-dlib/.stack-work/install/x86_64-linux/lts-8.18/8.0.2/libexec"
+sysconfdir = "/projects/haskell-dlib/.stack-work/install/x86_64-linux/lts-8.18/8.0.2/etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "processor_utils_bindir") (\_ -> return bindir)
